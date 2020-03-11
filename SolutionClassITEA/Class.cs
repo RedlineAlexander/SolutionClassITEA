@@ -18,6 +18,10 @@ using System.Threading.Tasks;
 Подсказка
 %InterfaceNam
 12.Создайте класс Extensions, в него добавьте extension метод для вашего изначального класса
+13. Переопределите метод ToString и Equals для вашего класса
+14. Запретите наследование вашего основного класса
+15. Создайте свой класс Exception. Переопределите конструкторы. Добавьте отлов ошибок в метод Main
+16. Добавьте enum для дней недели
  */
 namespace SolutionClassITEA
 {
@@ -146,13 +150,26 @@ namespace SolutionClassITEA
 
 
     }
-           public static   class Extensions
+           public static class Extensions
            {
             public static void ClassExtensionMethod(this Class @class, string stringClass)
                  {
 
                    }
             }
+
+
+    public class MyFirstException : Exception
+    {
+
+        public MyFirstException():base()
+        {
+
+        }
+    }
+
+    enum DaysOfWeek {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}
+
             class Program
             {
                 static void Main()
