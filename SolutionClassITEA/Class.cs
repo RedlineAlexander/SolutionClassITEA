@@ -46,7 +46,7 @@ namespace SolutionClassITEA
             return 1;
         }
     }
-   public class Class:abstractClass, IInterface, IInterface1
+    public sealed class Class:abstractClass, IInterface, IInterface1
     {
 
 
@@ -113,6 +113,18 @@ namespace SolutionClassITEA
         {
             throw new NotImplementedException();
         }
+        public override string ToString()
+        {
+            return $"({field1} {field2})";
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+
+            var other = (Class)obj;
+
+            return (this.field1 == other.field1) && (this.field2 == other.field2);
+        }
 
         /*
                 public static string ReturnCountVariable(int counter)
@@ -132,7 +144,7 @@ namespace SolutionClassITEA
                     }
                     */
 
-        
+
     }
            public static   class Extensions
            {
