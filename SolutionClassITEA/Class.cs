@@ -25,7 +25,7 @@ namespace SolutionClassITEA
             return 1;
         }
     }
-    class Class
+    class Class:abstractClass, IInterface
     {
 
 
@@ -62,6 +62,7 @@ namespace SolutionClassITEA
             get;
             set;
         }
+        public string HelloITEAInterface { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Class(int property_1, string property_2, double property_3)
         {
@@ -82,24 +83,34 @@ namespace SolutionClassITEA
             return field1;
         }
 
-/*
-        public static string ReturnCountVariable(int counter)
+        public void ShowITInterface()
         {
-            public static string string_one;
-
-        public static int a;
-        public static int b;
-        public static int c;
-
-     //   a = 1;
-      //  b = a++;
-     //       c = ++a;
-
-       // counter++;
-            return 0;
-            }
-            */
+            throw new NotImplementedException();
         }
+
+        public override string abstractStringMethod()
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
+                public static string ReturnCountVariable(int counter)
+                {
+                    public static string string_one;
+
+                public static int a;
+                public static int b;
+                public static int c;
+
+             //   a = 1;
+              //  b = a++;
+             //       c = ++a;
+
+               // counter++;
+                    return 0;
+                    }
+                    */
+    }
 
 }
 
