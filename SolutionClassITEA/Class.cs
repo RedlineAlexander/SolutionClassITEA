@@ -3,7 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * 1. Создали класса
+2. Добавили в него 3 свойства
+3. Добавили 2 поля
+4. Добавили свойства для этих полей, одно свойство только get, другое get/set, но сет только для класса (модификатор доступа)
+5. Конструктор с параметрами на 3 поля которые были в начале
+6. 2 метода - один возвращает значение, другой нет, один с параметрами, другой без
+7. Статический метод и поле, для подсчета количества созданных объектов
+8. Абстрактный класс с абстрактным и виртуальным методом
+9. Ваш изначальный класс должен унаследовать абстрактный и переопределить методы
+10. Добавьте интерфейс, добавьте метод и свойство, ваш класс(изначальный) должен реализовывать этот интерфейс
+11. Добавьте интерфейс, в нем метод, полностью совпадающий с методом из интерфейса с задания 10. Класс должен реализовать разное поведение метода, который он реализует от разных интерфейсов
+Подсказка
+%InterfaceNam
+12.Создайте класс Extensions, в него добавьте extension метод для вашего изначального класса
+ */
 namespace SolutionClassITEA
 {
     public interface IInterface
@@ -16,16 +31,22 @@ namespace SolutionClassITEA
         }
         void ShowITInterface();
     }
+    interface IInterface1
+    {
+        void ShowITInterface();
+
+    }
 
     public abstract class abstractClass
     {
         public abstract string abstractStringMethod();
+       // public abstract virtual string abstractStringMethod(); НЕЛЬЗЯ!!!!
         public virtual int counterNonAbstractMethod()
         {
             return 1;
         }
     }
-    class Class:abstractClass, IInterface
+   public class Class:abstractClass, IInterface, IInterface1
     {
 
 
@@ -110,7 +131,24 @@ namespace SolutionClassITEA
                     return 0;
                     }
                     */
+
+        
     }
+           public static   class Extensions
+           {
+            public static void ClassExtensionMethod(this Class @class, string stringClass)
+                 {
+
+                   }
+            }
+            class Program
+            {
+                static void Main()
+                {
+                    //Class instanceClass = new Class();
+
+                }
+            }
 
 }
 
