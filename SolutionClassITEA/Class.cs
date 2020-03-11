@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace SolutionClassITEA
 {
+
+    public abstract class abstractClass
+    {
+        public abstract string abstractStringMethod();
+        public virtual int counterNonAbstractMethod()
+        {
+            return 1;
+        }
+    }
     class Class
     {
 
@@ -16,13 +25,13 @@ namespace SolutionClassITEA
         public int Field1
         {
             get { return field1; }
-         //   set { field1 = value; }
+            //   set { field1 = value; }
 
         }
         public string Field2
 
         {
-            get{ return field2; }
+            get { return field2; }
             private set { field2 = value; }
         }
 
@@ -34,10 +43,10 @@ namespace SolutionClassITEA
             set;
         }
         public string property_2
-            {
+        {
             get;
             set;
-            }
+        }
         public double property_3
         {
             get;
@@ -62,5 +71,27 @@ namespace SolutionClassITEA
         {
             return field1;
         }
-    }
+
+/*
+        public static string ReturnCountVariable(int counter)
+        {
+            public static string string_one;
+
+        public static int a;
+        public static int b;
+        public static int c;
+
+     //   a = 1;
+      //  b = a++;
+     //       c = ++a;
+
+       // counter++;
+            return 0;
+            }
+            */
+        }
+
 }
+
+    
+
