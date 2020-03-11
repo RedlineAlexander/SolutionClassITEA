@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace SolutionClassITEA
 {
+    public interface IInterface
+    {
+        //public ошибка компиляции 
+        string HelloITEAInterface
+        {
+            get;
+            set;
+        }
+        void ShowITInterface();
+    }
 
     public abstract class abstractClass
     {
