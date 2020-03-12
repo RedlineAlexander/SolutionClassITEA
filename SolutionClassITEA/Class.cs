@@ -115,9 +115,14 @@ namespace SolutionClassITEA
         {
             return field1;
         }
-
+        //11. Добавьте интерфейс, в нем метод, полностью совпадающий с методом из интерфейса с задания 10. Класс должен реализовать разное поведение метода, который он реализует от разных интерфейсов
+        //Подсказка
+        //%InterfaceNam
         public void ShowITInterface()
         {
+
+
+            Console.WriteLine("Welcome to Totus in Farmastor, dear ");
             throw new NotImplementedException();
         }
 
