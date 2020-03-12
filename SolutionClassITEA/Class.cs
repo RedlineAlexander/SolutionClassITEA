@@ -128,9 +128,15 @@ namespace SolutionClassITEA
 
         public override string abstractStringMethod()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Welcome");
+            return "Welcome to the abstractStringMethod";
+           // throw new NotImplementedException();
         }
-       // 13. Переопределите метод ToString и Equals для вашего класса
+        public override int counterNonAbstractMethod()
+        {
+            return base.counterNonAbstractMethod();
+        }
+        // 13. Переопределите метод ToString и Equals для вашего класса
         public override string ToString()
         {
             return $"({field1} {field2})";
