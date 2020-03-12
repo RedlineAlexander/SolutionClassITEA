@@ -25,6 +25,7 @@ using System.Threading.Tasks;
  */
 namespace SolutionClassITEA
 {
+    //10. Добавьте интерфейс, добавьте метод и свойство, ваш класс(изначальный) должен реализовывать этот интерфейс
     public interface IInterface
     {
         //public ошибка компиляции 
@@ -35,12 +36,15 @@ namespace SolutionClassITEA
         }
         void ShowITInterface();
     }
+    //11. Добавьте интерфейс, в нем метод, полностью совпадающий с методом из интерфейса с задания 10. Класс должен реализовать разное поведение метода, который он реализует от разных интерфейсов
+    //Подсказка
+//%InterfaceNam
     interface IInterface1
     {
         void ShowITInterface();
 
     }
-
+    //8. Абстрактный класс с абстрактным и виртуальным методом
     public abstract class abstractClass
     {
         public abstract string abstractStringMethod();
@@ -50,6 +54,9 @@ namespace SolutionClassITEA
             return 1;
         }
     }
+    //9. Ваш изначальный класс должен унаследовать абстрактный и переопределить методы
+    // 13. Переопределите метод ToString и Equals для вашего класса
+    //14. Запретите наследование вашего основного класса
     public sealed class Class:abstractClass, IInterface, IInterface1
     {
 
@@ -117,6 +124,7 @@ namespace SolutionClassITEA
         {
             throw new NotImplementedException();
         }
+       // 13. Переопределите метод ToString и Equals для вашего класса
         public override string ToString()
         {
             return $"({field1} {field2})";
@@ -150,15 +158,16 @@ namespace SolutionClassITEA
 
 
     }
-           public static class Extensions
-           {
-            public static void ClassExtensionMethod(this Class @class, string stringClass)
-                 {
+    //12.Создайте класс Extensions, в него добавьте extension метод для вашего изначального класса
+    public static class Extensions
+    {
+         public static void ClassExtensionMethod(this Class @class, string stringClass)
+            {
 
-                   }
             }
+    }
 
-
+    //15. Создайте свой класс Exception.Переопределите конструкторы.Добавьте отлов ошибок в метод Main
     public class MyFirstException : Exception
     {
 
@@ -167,7 +176,7 @@ namespace SolutionClassITEA
 
         }
     }
-
+    //16. Добавьте enum для дней недели
     enum DaysOfWeek {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}
 
             class Program
