@@ -199,9 +199,9 @@ namespace SolutionClassITEA
                 Class @class = new Class(1, "Alexander", 4000.00);
                 Class @class2 = new Class(2, "Berdychev", 6000.00);
 
-
-                @class.ToString();
-                class2.ToString();
+                //свойства вывели 0 
+              Console.WriteLine  (@class.ToString());
+              Console.WriteLine  (class2.ToString());
             }
             catch(MyFirstException ce)
             {
@@ -211,7 +211,7 @@ namespace SolutionClassITEA
             {
                 Console.WriteLine("Anyway so anyway bro. Go in ITEA");
             }
-
+            Console.ReadKey();
                 }
             }
 
