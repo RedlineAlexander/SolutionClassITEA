@@ -123,7 +123,7 @@ namespace SolutionClassITEA
 
 
             Console.WriteLine("Welcome to Totus in Farmastor, dear ");
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public override string abstractStringMethod()
@@ -143,7 +143,12 @@ namespace SolutionClassITEA
 
             return (this.field1 == other.field1) && (this.field2 == other.field2);
         }
-
+        //7. Статический метод и поле, для подсчета количества созданных объектов
+        public static int ITEAEmployeeCounter;
+        public static int AddEmployee()
+        {
+            return ++ITEAEmployeeCounter;
+        }
         /*
                 public static string ReturnCountVariable(int counter)
                 {
@@ -207,6 +212,10 @@ namespace SolutionClassITEA
                 //свойства вывели 0 
               Console.WriteLine  (@class.ToString());
               Console.WriteLine  (class2.ToString());
+                Console.WriteLine(@class.Field1);
+                Console.WriteLine(@class.Field2);
+                //     Console.WriteLine(ShowITInterface());
+                class2.ShowITInterface();
             }
             catch(MyFirstException ce)
             {
