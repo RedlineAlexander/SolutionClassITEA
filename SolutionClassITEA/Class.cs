@@ -55,9 +55,9 @@ namespace SolutionClassITEA
         }
     }
     //9. Ваш изначальный класс должен унаследовать абстрактный и переопределить методы
-    // 13. Переопределите метод ToString и Equals для вашего класса
+    //13. Переопределите метод ToString и Equals для вашего класса
     //14. Запретите наследование вашего основного класса
-    public sealed class Class:abstractClass, IInterface, IInterface1
+    public sealed class Class : abstractClass, IInterface, IInterface1
     {
 
 
@@ -67,7 +67,7 @@ namespace SolutionClassITEA
         public int Field1
         {
             get { return field1; }
-            //   set { field1 = value; }
+          
 
         }
         public string Field2
@@ -105,10 +105,11 @@ namespace SolutionClassITEA
 
         }
 
-
+        //6. 2 метода - один возвращает значение, другой нет, один с параметрами, другой без
         public void method_1(int field1, string field2)
         {
-
+            field1 = 12;
+            field2 = "KUHAROO";
         }
         public int method_2()
         {
@@ -171,7 +172,7 @@ namespace SolutionClassITEA
     public class MyFirstException : Exception
     {
 
-        public MyFirstException():base()
+        public MyFirstException(string message):base(message)
         {
 
         }
@@ -183,7 +184,33 @@ namespace SolutionClassITEA
             {
                 static void Main()
                 {
-                    //Class instanceClass = new Class();
+            //Class instanceClass = new Class();
+        //    Class @class = new Class(1, "Alexander", 4000.00);
+          //  Class @class2 = new Class(2, "Berdychev", 6000.00);
+
+
+           // @class.ToString();
+         //   class2.ToString();
+
+            //  @class.Equals(@class, @class);
+            try
+            {
+
+                Class @class = new Class(1, "Alexander", 4000.00);
+                Class @class2 = new Class(2, "Berdychev", 6000.00);
+
+
+                @class.ToString();
+                class2.ToString();
+            }
+            catch(MyFirstException ce)
+            {
+                Console.WriteLine();
+            }
+            finally
+            {
+                Console.WriteLine("Anyway so anyway bro. Go in ITEA");
+            }
 
                 }
             }
